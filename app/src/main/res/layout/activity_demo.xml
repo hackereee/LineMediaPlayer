@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dip">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:scaleType="fitXY"
+        android:src="@android:drawable/ic_lock_lock"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/icon"
+        android:layout_alignTop="@+id/icon"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dip">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@android:color/darker_gray"
+            android:text="test"/>
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dip"
+            android:max="100"
+            android:maxHeight="5dip"
+            android:thumbOffset="0dp"
+            android:padding="0dp"
+            android:progress="0"
+            android:thumb="@drawable/seek_loading_drawer"
+            android:id="@+id/seekBar2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dip">
+            <ImageButton
+                android:id="@+id/previousPlay"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_media_previous"/>
+            <ImageButton
+                android:id="@+id/play"
+                android:layout_width="40dip"
+                android:layout_height="40dip"
+                android:background="@android:color/transparent"
+                android:src="@drawable/play_state_selector"/>
+        <ImageButton
+            android:id="@+id/nextPlay"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_media_next"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
