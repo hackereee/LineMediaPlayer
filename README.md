@@ -14,3 +14,5 @@
 >    其中，第一个参数为上下文，第二个参数为是否开启本地监听，如果这里为false，那么在需要使用的时候需要调用`SocketProxyPlay.getInstance().listening()`方进行监听开启，此方法建议和`close()`方进行对应使用，一般在Activity的onCreate 开启监听， 在 onDestory 进行close关闭监听。
 >    如果在Android 6.0 之上操作系统中，使用sd权限，需要进行权限申请，建议开启一个过渡的Activity（比如欢迎页）进行权限申请，申请结束后在申请结束的回调` onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) `里使用 `SocketProxyPlay.getInstance().createDefaultSavePath(Context context)`方法进行再次的缓存路径确认，以确保路径真的是sd卡路径，以免占用太多手机存储空间。
 >    具体可以参考DemoActivity 里的写法进行使用。
+=======
+# LineMediaPlayer
