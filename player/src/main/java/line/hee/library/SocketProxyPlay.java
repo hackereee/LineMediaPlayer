@@ -31,9 +31,9 @@ import line.hee.library.tools.L;
 
 /**
  * Created by hacceee on 2017/1/9.
- * 看了网上几篇blog，结论是如果要mediaplayer去播放实现预加载和边下边播的话，我们要手动实现一个代理服务器，代理到本地，也就是127.0.0.1
+ * 如果要mediaplayer去播放实现预加载和边下边播的话，我们要手动实现一个代理服务器，代理到本地，也就是127.0.0.1
  * 然后mediaplayer去访问的时候就直接请求我们的本地代理服务器
- * ，然后使用另外一个socket(或者http)模拟mediaplayer发送数据，返回的结果由本地代理服务器处理 按照这个思路编写这个边下边播的类
+ * ，然后使用另外一个socket(或者http)模拟mediaplayer发送数据，返回的结果手动设置到监听到的代理client socket中
  */
 
 public  class SocketProxyPlay {
@@ -659,7 +659,7 @@ public  class SocketProxyPlay {
     /*
      * handler
      */
-    class SocketProxyHandler extends Handler {
+    static class SocketProxyHandler extends Handler {
 
         /**
          * 持有这个类的弱引用，这样能避免发生内存泄露
